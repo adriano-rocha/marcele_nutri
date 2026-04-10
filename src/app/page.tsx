@@ -2,8 +2,8 @@ import Header from '@/components/Header';
 import WhatsAppButtonFloat from '@/components/WhatsAppButtonFloat';
 
 // ─── DADOS (edite aqui facilmente) ───────────────────────────────────────────
-const NOME = "Marceli";
-const CRN = "CRN-3: XXXXX"; // substitua pelo número real
+const NOME = "Marcele Asevedo";
+const CRN = "CRN-3: 010101010101"; // substitua pelo número real
 const WHATSAPP = "5511983554617";
 const WHATSAPP_MSG = encodeURIComponent("Olá! Gostaria de agendar uma consulta.");
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP}?text=${WHATSAPP_MSG}`;
