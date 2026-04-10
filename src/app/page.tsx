@@ -4,7 +4,7 @@ import WhatsAppButtonFloat from '@/components/WhatsAppButtonFloat';
 // ─── DADOS (edite aqui facilmente) ───────────────────────────────────────────
 const NOME = "Marcele Asevedo";
 const CRN = "CRN-3: 010101010101"; // substitua pelo número real
-const WHATSAPP = "5511983554617";
+const WHATSAPP = "5511914344551";
 const WHATSAPP_MSG = encodeURIComponent("Olá! Gostaria de agendar uma consulta.");
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP}?text=${WHATSAPP_MSG}`;
 
@@ -107,8 +107,8 @@ export default function Home() {
               <span className="text-rose-400">Nutricionista</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 max-w-xl mb-10 leading-relaxed">
-              Emagrecimento saudável, performance e qualidade de vida com um
-              olhar único para a sua individualidade.
+             Sou uma Nutricionista Batalhadora e Guerreira. <br></br>Vim da Paraíba em busca do meu sonho em ser DOTORA 👩‍⚕️
+            
             </p>
             <a
               href={WHATSAPP_LINK}
