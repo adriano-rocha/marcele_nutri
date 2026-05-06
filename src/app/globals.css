@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* src/app/globals.css */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Botões ── */
+.btn-green {
+  display: inline-block;
+  background-color: #5e8c6a;
+  color: #ffffff;
+  transition: background-color 0.2s;
+  text-decoration: none;
 }
+.btn-green:hover { background-color: #4a7055; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.btn-outline-rose {
+  display: inline-block;
+  border: 2px solid #d18e8f;
+  color: #d18e8f;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
 }
+.btn-outline-rose:hover { background-color: #d18e8f; color: #ffffff; }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.btn-outline-light {
+  display: inline-block;
+  border: 2px solid #d8dad6;
+  color: #d8dad6;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.btn-outline-light:hover { background-color: #d8dad6; color: #372b2e; }
+
+/* ── FAQ ── */
+.faq-item { border-bottom: 1px solid #d18e8f44; }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: #d18e8f;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-answer { padding: 0 0 20px; line-height: 1.7; }
+
+/* ── Plano destaque ── */
+.plano-destaque {
+  border: 2px solid #d18e8f !important;
+  position: relative;
 }
