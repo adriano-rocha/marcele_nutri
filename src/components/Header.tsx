@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-const FONT_TITLE = { fontFamily: 'var(--font-playfair), Georgia, serif' };
+const FONT_TITLE = { fontFamily: "var(--font-playfair), Georgia, serif" };
 
 const links = [
-  { label: 'Home',           href: '#home' },
-  { label: 'Sobre',          href: '#sobre' },
-  { label: 'O que inclui',   href: '#servicos' },
-  { label: 'Como funciona',  href: '#como-funciona' },
-  { label: 'Planos',         href: '#planos' },
-  { label: 'FAQ',            href: '#faq' },
-  { label: 'Contato',        href: '#contato' },
+  { label: "Home", href: "#home" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "O que inclui", href: "#servicos" },
+  { label: "Como funciona", href: "#como-funciona" },
+  { label: "Planos", href: "#planos" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contato", href: "#contato" },
 ];
 
 export default function Header() {
@@ -62,15 +62,19 @@ export default function Header() {
       {/* Navbar */}
       <header
         className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md shadow-sm"
-        style={{ backgroundColor: 'rgba(216, 218, 214, 0.92)' }}
+        style={{ backgroundColor: "rgba(216, 218, 214, 0.92)" }}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center gap-6">
-
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center gap-6">
           {/* Logo */}
           <a
             href="#home"
-            className="text-xl font-bold shrink-0"
-            style={{ ...FONT_TITLE, color: '#5e8c6a', fontStyle: 'italic', textDecoration: 'none' }}
+            className="text-lg lg:text-xl font-bold shrink-0"
+            style={{
+              ...FONT_TITLE,
+              color: "#5e8c6a",
+              fontStyle: "italic",
+              textDecoration: "none",
+            }}
           >
             Marcele Nutri
           </a>
@@ -79,27 +83,32 @@ export default function Header() {
           <ul className="hidden lg:flex items-center gap-6">
             {links.slice(0, -1).map((item) => (
               <li key={item.label}>
-                <a href={item.href} className="nav-link">{item.label}</a>
+                <a href={item.href} className="nav-link">
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
 
           {/* Botão CTA desktop */}
-          <a
-            href="#planos"
-            className="nav-cta hidden lg:inline-block"
-          >
+          <a href="#planos" className="nav-cta hidden lg:inline-block">
             Ver planos
           </a>
 
           {/* Botão hambúrguer mobile */}
           <button
             className="lg:hidden text-2xl ml-auto"
-            style={{ color: '#372b2e', background: 'none', border: 'none', cursor: 'pointer', lineHeight: 1 }}
+            style={{
+              color: "#372b2e",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              lineHeight: 1,
+            }}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Abrir menu"
           >
-            {menuOpen ? '✕' : '☰'}
+            {menuOpen ? "✕" : "☰"}
           </button>
         </nav>
       </header>
@@ -108,7 +117,7 @@ export default function Header() {
       {menuOpen && (
         <div
           className="lg:hidden fixed top-14.25 left-0 right-0 z-40 shadow-lg px-6 py-4"
-          style={{ backgroundColor: '#d8dad6' }}
+          style={{ backgroundColor: "#d8dad6" }}
         >
           <ul>
             {links.map((item) => (

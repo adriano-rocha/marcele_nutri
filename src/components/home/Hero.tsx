@@ -12,7 +12,7 @@ export default function Hero() {
       <img
         src="/images/mah_01.jpeg"
         alt={NOME}
-        className="w-full md:hidden h-[280px] object-cover object-center"
+        className="w-full md:hidden object-contain"
       />
 
       {/* Desktop image with mask */}
@@ -22,7 +22,8 @@ export default function Hero() {
         className="hidden md:block absolute right-0 bottom-0 h-full w-auto max-w-[45%] object-cover object-top"
         style={{
           maskImage: "linear-gradient(to left, black 60%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to left, black 60%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to left, black 60%, transparent 100%)",
         }}
       />
 
@@ -30,7 +31,8 @@ export default function Hero() {
       <div
         className="hidden md:block absolute inset-0 z-0"
         style={{
-          background: "linear-gradient(to right, #372b2e 50%, #372b2ecc 75%, transparent 100%)",
+          background:
+            "linear-gradient(to right, #372b2e 50%, #372b2ecc 75%, transparent 100%)",
         }}
       />
 
@@ -65,7 +67,8 @@ export default function Hero() {
           className="text-lg md:text-xl max-w-xl mb-10 leading-relaxed"
           style={{ ...FB, color: "#d8dad6cc" }}
         >
-          Acompanhamento personalizado, leve e baseado em ciência — sem dietas restritivas.
+          Acompanhamento personalizado, leve e baseado em ciência — sem dietas
+          restritivas.
         </p>
 
         <div className="flex flex-wrap gap-4">
