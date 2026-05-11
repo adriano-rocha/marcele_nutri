@@ -76,7 +76,7 @@ export default function Header() {
               textDecoration: "none",
             }}
           >
-            Marcele Nutri
+            Marcele Asevedo Nutri
           </a>
 
           {/* Links desktop */}

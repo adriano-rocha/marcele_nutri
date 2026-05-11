@@ -149,7 +149,7 @@ export const faqs = [
       "Sim. Atendo pessoas com diferentes condições de saúde, como síndrome dos ovários policísticos (SOP), resistência à insulina, diabetes, hipertensão e alterações intestinais, entre outras. O acompanhamento é sempre individualizado, considerando sua rotina, exames e necessidades clínicas.",
   },
   {
-    pergunta: "Qual o público atendido?",
+    pergunta: "Atende todos os públicos?",
     resposta:
       "Não realizo atendimentos para gestantes, crianças, idosos acima de 70 anos ou pacientes com dieta vegetariana/vegana.",
   },

@@ -12,7 +12,7 @@ export default function Footer() {
         }}
       >
         <p>
-          © {new Date().getFullYear()} M.A. Nutrição · Marcele Nutri · {CRN}
+          © {new Date().getFullYear()} M.A. Nutrição · Marcele Asevedo Nutri · {CRN}
         </p>
         <p className="mt-2">
           <a

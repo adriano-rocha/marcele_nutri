@@ -12,7 +12,8 @@ export default function Hero() {
       <img
         src="/images/mah_01.jpeg"
         alt={NOME}
-        className="w-full md:hidden object-contain"
+        className="w-full md:hidden object-cover"
+        style={{ aspectRatio: "3 / 4" }}
       />
 
       {/* Desktop image with mask */}
