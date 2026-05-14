@@ -1,4 +1,5 @@
 // src/components/home/Sobre.tsx
+import Image from "next/image";
 import { FT, FB, NOME } from "../../data/nutriData";
 
 const credenciais = [
@@ -9,69 +10,56 @@ const credenciais = [
 
 export default function Sobre() {
   return (
-    <section
-      id="sobre"
-      className="py-24"
-      style={{ backgroundColor: "#ffffff" }}
-    >
-      <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <section id="sobre" className="py-24 bg-white">
+      <div className="mx-auto grid max-w-5xl items-center gap-16 px-6 md:grid-cols-2">
         <div>
           <p
-            className="text-sm font-semibold tracking-widest uppercase mb-3"
+            className="mb-3 text-sm font-semibold uppercase tracking-widest"
             style={{ ...FB, color: "#5e8c6a" }}
           >
             Sobre mim
           </p>
 
           <h2
-            className="text-3xl md:text-4xl font-bold mb-2"
+            className="mb-2 text-3xl font-bold md:text-4xl"
             style={{ ...FT, color: "#372b2e" }}
           >
             Por trás de cada plano,
           </h2>
 
           <h2
-            className="text-3xl md:text-4xl font-bold mb-6"
-            style={{ ...FT, color: "#d18e8f", fontStyle: "italic" }}
+            className="mb-6 text-3xl font-bold italic md:text-4xl"
+            style={{ ...FT, color: "#d18e8f" }}
           >
             existe um olhar individual.
           </h2>
 
-          <hr className="w-16 mb-6" style={{ borderColor: "#d18e8f" }} />
+          <hr className="mb-6 w-16 border-[#d18e8f]" />
 
-          <p
-            className="text-lg leading-relaxed mb-4"
-            style={{ ...FB, color: "#372b2e" }}
-          >
-            Sou <strong>Marcele Asevedo</strong>, nutricionista com atuação
-            voltada para <strong>saúde da mulher e emagrecimento sem restrições</strong>.
-            Atendo de forma online, com foco em um acompanhamento próximo e personalizado.
+          <p className="mb-4 text-lg leading-relaxed" style={{ ...FB, color: "#372b2e" }}>
+            Sou <strong>Marcele Asevedo</strong>, nutricionista com atuação voltada para{" "}
+            <strong>saúde da mulher e emagrecimento sem restrições</strong>. Atendo de forma online,
+            com foco em um acompanhamento próximo e personalizado.
           </p>
 
-          <p
-            className="text-lg leading-relaxed mb-4"
-            style={{ ...FB, color: "#372b2e" }}
-          >
+          <p className="mb-4 text-lg leading-relaxed" style={{ ...FB, color: "#372b2e" }}>
             Acredito em uma nutrição possível — sem extremismos e sem padrões inalcançáveis.
             Um cuidado que se adapta à sua rotina e promove resultados consistentes ao longo do tempo.
           </p>
 
-          <p
-            className="text-lg leading-relaxed mb-8"
-            style={{ ...FB, color: "#372b2e" }}
-          >
-            Com base na ciência e em constante atualização, desenvolvo estratégias pensadas
-            para você, respeitando sua individualidade em cada etapa do processo.
+          <p className="mb-8 text-lg leading-relaxed" style={{ ...FB, color: "#372b2e" }}>
+            Com base na ciência e em constante atualização, desenvolvo estratégias pensadas para você,
+            respeitando sua individualidade em cada etapa do processo.
           </p>
 
-          <ul className="space-y-3 mb-8">
+          <ul className="mb-8 space-y-3">
             {credenciais.map((item) => (
               <li
                 key={item}
                 className="flex items-start gap-3"
                 style={{ ...FB, color: "#372b2e" }}
               >
-                <span className="font-bold mt-0.5" style={{ color: "#5e8c6a" }}>
+                <span className="mt-0.5 font-bold" style={{ color: "#5e8c6a" }}>
                   ✓
                 </span>
                 <span>{item}</span>
@@ -81,7 +69,7 @@ export default function Sobre() {
 
           <a
             href="#planos"
-            className="btn-outline-rose px-8 py-3 rounded-full font-semibold inline-flex items-center"
+            className="btn-outline-rose inline-flex items-center rounded-full px-8 py-3 font-semibold"
             style={FB}
           >
             Ver planos
@@ -90,14 +78,19 @@ export default function Sobre() {
 
         <div className="relative">
           <div
-            className="absolute -top-4 -left-4 w-full h-full rounded-2xl"
+            className="absolute -left-4 -top-4 h-full w-full rounded-2xl"
             style={{ backgroundColor: "#d8dad6" }}
           />
-          <img
-            src="/images/mah_06.jpeg"
-            alt={`Nutricionista ${NOME}`}
-            className="relative rounded-2xl w-full h-96 object-cover shadow-xl"
-          />
+          <div className="relative h-120 w-full overflow-hidden rounded-2xl shadow-xl">
+            <Image
+              src="/images/marcele_02.jpeg"
+              alt={`Nutricionista ${NOME}`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

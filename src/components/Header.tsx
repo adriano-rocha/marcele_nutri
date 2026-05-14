@@ -10,6 +10,7 @@ const links = [
   { label: "O que inclui", href: "#servicos" },
   { label: "Como funciona", href: "#como-funciona" },
   { label: "Planos", href: "#planos" },
+  { label: "Antropometria", href: "#antropometria" },
   { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
 ];
@@ -68,11 +69,13 @@ export default function Header() {
           {/* Logo */}
           <a
             href="#home"
-            className="text-lg lg:text-xl font-bold shrink-0"
+            className="text-lg lg:text-2xl font-bold shrink-0"
             style={{
               ...FONT_TITLE,
               color: "#5e8c6a",
-              fontStyle: "italic",
+              fontStyle: "normal",
+              fontWeight: 800, 
+              letterSpacing: "0.05em",
               textDecoration: "none",
             }}
           >

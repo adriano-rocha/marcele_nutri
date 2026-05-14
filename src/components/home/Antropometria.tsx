@@ -61,7 +61,7 @@ export default function Antropometria() {
           {/* Imagem */}
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src="/images/medidas.png"
+              src="/images/antropometria.png"
               alt="Guia de como tirar suas medidas corporais"
               width={480}
               height={360}

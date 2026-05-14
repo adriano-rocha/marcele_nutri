@@ -1,5 +1,6 @@
 // src/components/home/Hero.tsx
 import { FT, FB, WHATSAPP_LINK, CRN, NOME } from "../../data/nutriData";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -9,24 +10,37 @@ export default function Hero() {
       style={{ backgroundColor: "#372b2e" }}
     >
       {/* Mobile image */}
-      <img
-        src="/images/mah_01.jpeg"
-        alt={NOME}
-        className="w-full md:hidden object-cover"
+      <div
+        className="relative w-full md:hidden"
         style={{ aspectRatio: "3 / 4" }}
-      />
+      >
+        <Image
+          src="/images/marcele_01.jpeg"
+          alt={NOME}
+          fill
+          sizes="100vw"
+          className="object-cover object-top"
+        />
+      </div>
 
       {/* Desktop image with mask */}
-      <img
-        src="/images/mah_01.jpeg"
-        alt={NOME}
-        className="hidden md:block absolute right-0 bottom-0 h-full w-auto max-w-[45%] object-cover object-top"
+      <div
+        className="hidden md:block absolute right-0 bottom-0 h-full max-w-[45%]"
         style={{
+          width: "45%",
           maskImage: "linear-gradient(to left, black 60%, transparent 100%)",
           WebkitMaskImage:
             "linear-gradient(to left, black 60%, transparent 100%)",
         }}
-      />
+      >
+        <Image
+          src="/images/marcele_01.jpeg"
+          alt={NOME}
+          fill
+          sizes="45vw"
+          className="object-cover object-top"
+        />
+      </div>
 
       {/* Overlay gradient */}
       <div
