@@ -16,7 +16,7 @@ const lato = Lato({
 
 export const metadata = {
   title: 'Marcele Asevedo | Nutricionista',
-  description: 'Nutricionista especialista em emagrecimento saudável, nutrição esportiva, funcional e estética.',
+  description: 'Nutricionista com foco em saúde da mulher & emagrecimento.',
 };
 
 export default function RootLayout({

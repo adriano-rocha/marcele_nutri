@@ -9,7 +9,6 @@ const links = [
   { label: "Sobre", href: "#sobre" },
   { label: "O que inclui", href: "#servicos" },
   { label: "Como funciona", href: "#como-funciona" },
-  { label: "Planos", href: "#planos" },
   { label: "Antropometria", href: "#antropometria" },
   { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
@@ -17,6 +16,9 @@ const links = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
     <>
@@ -60,21 +62,19 @@ export default function Header() {
         .menu-mobile-link:last-child { border-bottom: none; }
       `}</style>
 
-      {/* Navbar */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md shadow-sm"
+        className="fixed top-0 left-0 right-0 z-50 shadow-sm backdrop-blur-md"
         style={{ backgroundColor: "rgba(216, 218, 214, 0.92)" }}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center gap-6">
-          {/* Logo */}
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-2 sm:px-6 lg:px-8">
           <a
             href="#home"
-            className="text-lg lg:text-2xl font-bold shrink-0"
+            className="shrink-0 text-lg font-bold lg:text-2xl"
             style={{
               ...FONT_TITLE,
               color: "#5e8c6a",
               fontStyle: "normal",
-              fontWeight: 800, 
+              fontWeight: 800,
               letterSpacing: "0.05em",
               textDecoration: "none",
             }}
@@ -82,9 +82,8 @@ export default function Header() {
             Marcele Asevedo Nutri
           </a>
 
-          {/* Links desktop */}
-          <ul className="hidden lg:flex items-center gap-6">
-            {links.slice(0, -1).map((item) => (
+          <ul className="hidden items-center gap-6 lg:flex">
+            {links.map((item) => (
               <li key={item.label}>
                 <a href={item.href} className="nav-link">
                   {item.label}
@@ -93,14 +92,13 @@ export default function Header() {
             ))}
           </ul>
 
-          {/* Botão CTA desktop */}
           <a href="#planos" className="nav-cta hidden lg:inline-block">
             Ver planos
           </a>
 
-          {/* Botão hambúrguer mobile */}
           <button
-            className="lg:hidden text-2xl ml-auto"
+            type="button"
+            className="ml-auto text-2xl lg:hidden"
             style={{
               color: "#372b2e",
               background: "none",
@@ -108,40 +106,33 @@ export default function Header() {
               cursor: "pointer",
               lineHeight: 1,
             }}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Abrir menu"
+            onClick={toggleMenu}
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             {menuOpen ? "✕" : "☰"}
           </button>
         </nav>
       </header>
 
-      {/* Menu mobile */}
       {menuOpen && (
         <div
-          className="lg:hidden fixed top-14.25 left-0 right-0 z-40 shadow-lg px-6 py-4"
+          id="mobile-menu"
+          className="fixed left-0 right-0 top-14 z-40 px-6 py-4 shadow-lg lg:hidden"
           style={{ backgroundColor: "#d8dad6" }}
         >
           <ul>
             {links.map((item) => (
               <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="menu-mobile-link"
-                  onClick={() => setMenuOpen(false)}
-                >
+                <a href={item.href} className="menu-mobile-link" onClick={closeMenu}>
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
 
-          {/* CTA mobile */}
-          <a
-            href="#planos"
-            className="nav-cta block text-center mt-4 py-3"
-            onClick={() => setMenuOpen(false)}
-          >
+          <a href="#planos" className="nav-cta mt-4 block py-3 text-center" onClick={closeMenu}>
             Ver planos →
           </a>
         </div>

@@ -53,12 +53,10 @@ export default function Antropometria() {
             style={{ borderColor: "#d18e8f" }}
           />
         </div>
-
-        {/* Imagem de medidas + introdução — layout lado a lado no desktop */}
+        
         <div className="flex flex-col md:flex-row gap-10 items-center mb-14 rounded-2xl p-8"
           style={{ backgroundColor: "#d8dad622", border: "1px solid #d18e8f22" }}>
-
-          {/* Imagem */}
+          
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src="/images/antropometria.png"
@@ -69,8 +67,7 @@ export default function Antropometria() {
               priority
             />
           </div>
-
-          {/* Texto explicativo */}
+          
           <div className="w-full md:w-1/2">
             <p
               className="text-xs font-bold tracking-widest uppercase mb-3"
@@ -110,8 +107,7 @@ export default function Antropometria() {
         {/* Mobile: Slider com setas e dots */}
         <div className="flex md:hidden flex-col gap-4">
           <div className="flex items-center gap-3">
-
-            {/* Seta esquerda */}
+            
             <button
               onClick={prev}
               disabled={activeIndex === 0}
@@ -128,8 +124,7 @@ export default function Antropometria() {
             >
               ‹
             </button>
-
-            {/* Slides */}
+            
             <div
               ref={sliderRef}
               className="flex gap-4 overflow-x-auto snap-x snap-mandatory flex-1"
@@ -152,8 +147,7 @@ export default function Antropometria() {
                 </div>
               ))}
             </div>
-
-            {/* Seta direita */}
+            
             <button
               onClick={next}
               disabled={activeIndex === antropometria.length - 1}
@@ -171,8 +165,7 @@ export default function Antropometria() {
               ›
             </button>
           </div>
-
-          {/* Dots */}
+          
           <div className="flex justify-center gap-2 mt-2">
             {antropometria.map((_, i) => (
               <button
@@ -193,8 +186,7 @@ export default function Antropometria() {
             ))}
           </div>
         </div>
-
-        {/* Desktop: Grid */}
+        
         <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-8">
           {antropometria.map((texto, i) => (
             <div

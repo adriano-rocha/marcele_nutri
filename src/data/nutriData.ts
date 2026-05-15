@@ -1,6 +1,3 @@
-// src/data/nutriData.ts
-
-// ─── DADOS PRINCIPAIS ─────────────────────────────────────────────────────
 export const NOME = "Marcele Asevedo";
 export const CRN = "CRN-3 46017";
 export const WHATSAPP = "5511914344551";
@@ -11,13 +8,11 @@ export const WHATSAPP_MSG = encodeURIComponent(
 
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP}?text=${WHATSAPP_MSG}`;
 
-// ─── FONTES ───────────────────────────────────────────────────────────────
 import type { CSSProperties } from 'react';
 
 export const FT: CSSProperties = { fontFamily: "var(--font-playfair), Georgia, serif" };
 export const FB: CSSProperties = { fontFamily: "var(--font-lato), sans-serif" };
 
-// ─── DADOS DAS SEÇÕES ─────────────────────────────────────────────────────
 export const inclusos = [
   {
     icon: "🕐",

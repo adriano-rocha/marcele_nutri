@@ -9,12 +9,10 @@ export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    // Primeiro marca como montado
+  useEffect(() => {    
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
-
-    // Usa setTimeout para evitar o warning de setState síncrono
+   
     const timer = setTimeout(() => {
       const consent = localStorage.getItem('cookie_consent');
       if (!consent) {

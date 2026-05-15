@@ -203,8 +203,7 @@ export default function Planos() {
               const info = modo === 'pix' ? plano.pix : plano.cartao;
               return (
                 <div key={plano.nome} className={`plano-card ${plano.destaque ? 'destaque' : ''}`}>
-
-                  {/* Badge */}
+                 
                   {plano.destaque && (
                     <div className="text-center mb-4">
                       <span className="text-xs font-bold tracking-widest uppercase px-4 py-1 rounded-full text-white"
@@ -213,18 +212,15 @@ export default function Planos() {
                       </span>
                     </div>
                   )}
-
-                  {/* Label plano */}
+                  
                   <p className="text-xs font-bold tracking-widest uppercase mb-1" style={{ ...FB, color: "#5e8c6a" }}>
                     Plano
                   </p>
-
-                  {/* Nome */}
+                
                   <h3 className="text-2xl font-bold mb-3" style={{ ...FT, color: "#372b2e" }}>
                     {plano.nome}
                   </h3>
-
-                  {/* Preço */}
+                  
                   <p className="text-4xl font-bold mb-1" style={{ ...FT, color: "#d18e8f" }}>
                     {info.preco}
                   </p>
@@ -238,8 +234,7 @@ export default function Planos() {
                   )}
 
                   <hr className="my-4" style={{ borderColor: "#d8dad6" }} />
-
-                  {/* Itens */}
+                  
                   <ul className="space-y-3 mb-6 flex-1">
                     {plano.itens.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm" style={{ ...FB, color: "#372b2e" }}>
@@ -252,8 +247,7 @@ export default function Planos() {
                       </li>
                     )}
                   </ul>
-
-                  {/* Botão */}
+                  
                   <a
                     href={WHATSAPP_LINK}
                     target="_blank"
@@ -267,8 +261,7 @@ export default function Planos() {
               );
             })}
           </div>
-
-          {/* Nota sobre cartão */}
+          
           {modo === 'cartao' && (
             <p className="text-center text-xs mt-6" style={{ ...FB, color: "#372b2e99" }}>
               * Pagamento no cartão via InfinitePay. Os valores apresentados já incluem a taxa da operadora.
