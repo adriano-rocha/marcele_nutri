@@ -79,7 +79,7 @@ export default function Header() {
               textDecoration: "none",
             }}
           >
-            Marcele Asevedo Nutri
+            Nutri da Mulher - Marcele Asevedo
           </a>
 
           <ul className="hidden items-center gap-6 lg:flex">
