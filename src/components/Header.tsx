@@ -9,6 +9,7 @@ const links = [
   { label: "Sobre", href: "#sobre" },
   { label: "O que inclui", href: "#servicos" },
   { label: "Como funciona", href: "#como-funciona" },
+  { label: 'Evolução', href: '#mmc' },
   { label: "Antropometria", href: "#antropometria" },
   { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },

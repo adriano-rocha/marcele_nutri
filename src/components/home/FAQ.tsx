@@ -1,4 +1,3 @@
-// src/components/home/FAQ.tsx
 import { FT, FB, faqs } from '../../data/nutriData';
 
 export default function FAQ() {

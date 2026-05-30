@@ -8,6 +8,7 @@ import Sobre from "@/components/home/Sobre";
 import Servicos from "@/components/home/Servicos";
 import ComoFunciona from "@/components/home/ComoFunciona";
 import Planos from "@/components/home/Planos";
+import MMC from "@/components/home/MMC";
 import Antropometria from "@/components/home/Antropometria";
 import FAQ from "@/components/home/FAQ";
 import CTA from "@/components/home/CTA";
@@ -23,6 +24,7 @@ export default function Home() {
         <Servicos />
         <ComoFunciona />
         <Planos />
+        <MMC />
         <Antropometria />
         <FAQ />
         <CTA />
